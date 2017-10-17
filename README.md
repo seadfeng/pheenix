@@ -31,6 +31,12 @@ pheenix.reseller_check_domains_availability({ domains: 'pheenix.com' })
 
 pheenix.reseller_register_domains({ domains: 'newdomain.com' })
 
+pheenix.add_backorders({ domains: 'expireddomains.com' })
+
+pheenix.add_backorders({ domains: 'expireddomains.com', type: 'super_saver' })
+
+pheenix.cancel_backorders({ domains: 'expireddomains.com' })
+
 
 ## Development
 
