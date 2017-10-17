@@ -72,6 +72,19 @@ module Pheenix
 	       curl("#{pheenix_host}reseller_register_domains/#{str}")  	
 	    end 
 
+	    def add_backorders(config = {}) 
+	   	   str = args("domains",config[:domains])
+	   	   if !config[:type].nil?
+	   	   		str = "#{str}&type=super_saver"
+	   	   end
+	       curl("#{pheenix_host}add_backorders/#{str}")  	
+	    end 
+
+	    def cancel_backorders(config = {}) 
+	   	   str = args("domains",config[:domains])
+	       curl("#{pheenix_host}cancel_backorders/#{str}")  	
+	    end 	    
+
 	    def list_backorders
 	    	curl("#{pheenix_host}list_backorders") 
 	    end
