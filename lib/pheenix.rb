@@ -66,5 +66,30 @@ class Pheenix
        curl("#{pheenix_host}reseller_check_domains_availability/#{str}")  	
     end
 
+    def reseller_register_domains(config = {}) 
+   	   str = args("domains",config[:domains])
+       curl("#{pheenix_host}reseller_register_domains/#{str}")  	
+    end 
+    
+    def list_backorders
+    	curl("#{pheenix_host}list_backorders") 
+    end
+
+    def list_won_marketplace
+    	curl("#{pheenix_host}list_won_marketplace") 
+    end
+
+    def list_marketplace
+    	curl("#{pheenix_host}list_marketplace") 
+    end
+
+    def list_lost_marketplace
+    	curl("#{pheenix_host}list_lost_marketplace") 
+    end
+
+    def list_current_marketplace
+    	curl("#{pheenix_host}list_current_marketplace") 
+    end
+    
 end
 

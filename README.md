@@ -27,6 +27,11 @@ pheenix = Pheenix.new({username: "username", api_key: "api_key"})
 
 pheenix.list_domains
 
+pheenix.reseller_check_domains_availability({ domains: 'pheenix.com' })
+
+pheenix.reseller_register_domains({ domains: 'newdomain.com' })
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
