@@ -83,7 +83,15 @@ module Pheenix
 	    def cancel_backorders(config = {}) 
 	   	   str = args("domains",config[:domains])
 	       curl("#{pheenix_host}cancel_backorders/#{str}")  	
-	    end 	    
+	    end 	
+
+	    def list_pending_deletes(config = {}) 
+	    	str = ''
+	    	if !config[:day].nil?
+	    		str = "/day=#{config[:day]}"
+	    	end
+	    	curl("#{pheenix_host}list_pending_deletes#{str}")
+	    end    
 
 	    def list_backorders
 	    	curl("#{pheenix_host}list_backorders") 
