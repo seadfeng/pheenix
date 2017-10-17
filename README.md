@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-pheenix = Pheenix.new({username: "username", api_key: "api_key"})
+pheenix = Pheenix::Client.new({username: "username", api_key: "api_key"})
 
 pheenix.list_domains
 
